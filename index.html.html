@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Contact Cards</title>
+	<meta name="description" content="The information typed in the form will be shown as interactive contact cards on the right!">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("form").submit(function(){
+				$("#cards").append("<div class='card'><h2>"+$("#first_name").val()+" "+$("#last_name").val()+"</h2><p>Click for description!</p><p class='hideme'>"+$(".description").val()+"</p></div>");
+				$("#first_name").val("");
+				$("#last_name").val("");
+				$(".description").val("");
+				return false
+			});
+			$(document).on('click','.card', function(){
+				$(this).children().toggle();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="formdiv">
+			<h1>Add User</h1>
+			<form>
+				<label value="First Name">First Name: <input type="text" id="first_name" name="first_name" placeholder="First Name"></label>
+				<label>Last Name: <input type="text" id="last_name" name="last_name" placeholder="Last Name"></label>
+				<label>Description:</label>
+				<textarea class="description" name="description" placeholder="Enter description"></textarea>
+				<input type="submit" class="button" value="Add User">
+			</form>
+		</div>
+		<div id="cards">
+			<h1>Contact Cards</h1>
+		</div>
+	</div>  <!-- end of wrapper -->
+</body>
+</html>

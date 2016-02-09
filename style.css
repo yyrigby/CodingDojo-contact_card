@@ -1,0 +1,52 @@
+*{
+	font-family: sans-serif;
+}
+#wrapper{
+	width: 970px;
+	margin: 0px auto;
+}
+#formdiv{
+	width: 400px;
+	margin: 0px;
+	padding: 10px;
+	display: inline-block;
+}
+	#formdiv h1{
+		border-bottom: 2px solid gray;
+	}
+	#formdiv label{
+		display: block;
+		padding: 5px;
+	}
+	#formdiv .description{
+		width: 270px;
+		height: 150px;
+		display: block;
+	}
+	#formdiv input.button{
+		box-shadow: 3px 3px gray;
+		margin-top: 10px;
+	}
+#cards{
+	width: 500px;
+	margin: 0px;
+	padding: 10px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+}
+	#cards h1{
+		margin-bottom: 5px;
+	}
+	#cards p{
+		margin:5px;
+	}
+	.card{
+		width: 200px;
+		height: 120px;
+		margin: 10px auto;
+		border: 1px solid black;
+	}
+	.card .hideme{
+		display: none;
+	}
